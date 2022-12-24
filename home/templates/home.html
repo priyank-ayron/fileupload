@@ -94,7 +94,7 @@ body p {
 
         <img src="/media/image/undraw.svg" class="img-fluid img-responsive" style="height: 200px;">
     </div>
-
+  {% csrf_token %}
   <input type="file" class="my-pond mt-4" multiple name="filepond" data-max-files="20" />
 
   <div class="text-center">
@@ -136,7 +136,6 @@ body p {
     var url = null
     function upload_file() {
         var files = pond.getFiles()
-        console.log(files)
         var formdata = new FormData()
         for (var i = 0; i < files.length; i++) {
             formdata.append('files', files[i].file)
