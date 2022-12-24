@@ -176,7 +176,7 @@ body p {
           .then(result => {
               console.log(result)
 
-              url = `http://127.0.0.1:8000/download/${result.data.folder}`
+              url = `https://django-fileupload.up.railway.app/download/${result.data.folder}`
               var element = document.getElementById("able_status");
               element.classList.remove("clipboard");
               element.classList.add("clipboard_after_upload");
